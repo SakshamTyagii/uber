@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mapbox-gl-marker: #276EF1;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  @apply bg-white dark:bg-uber-black text-uber-black dark:text-white font-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mapboxgl-ctrl-attrib-inner {
+  @apply text-xs opacity-70;
+}
+
+.mapboxgl-marker {
+  cursor: pointer;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none;
+  }
+  
+  .btn-primary {
+    @apply bg-uber-black text-white hover:bg-gray-800 dark:bg-uber-blue dark:hover:bg-blue-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-uber-black hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-uber-blue;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-uber rounded-xl shadow-uber;
+  }
+}
